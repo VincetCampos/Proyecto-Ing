@@ -20,7 +20,7 @@ jobs:
         working-directory: backend/src
         run: |
           npm install
-          echo MONGO_URL="mongodb+srv://vincetalecampossam:gEDxFAVy2wLBbOTV@cluster0.cp3u7ds.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0" > .env
+          echo "MONGO_URL=mongodb+srv://vincetalecampossam:gEDxFAVy2wLBbOTV@cluster0.cp3u7ds.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0" > .env
 
       - name: Set up SSH key
         run: |
@@ -58,7 +58,7 @@ jobs:
         working-directory: backend/src
         run: |
           npm install
-          echo MONGO_URL="mongodb+srv://vincetalecampossam:gEDxFAVy2wLBbOTV@cluster0.cp3u7ds.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0" > .env
+          echo "MONGO_URL=mongodb+srv://vincetalecampossam:gEDxFAVy2wLBbOTV@cluster0.cp3u7ds.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0" > .env
 
       - name: Set up SSH key
         run: |
