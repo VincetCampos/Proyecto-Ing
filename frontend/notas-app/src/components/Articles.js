@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import Global from '../Global';
 import Article from './Article';
@@ -10,17 +10,17 @@ const Articles = () => {
 
     useEffect(() => {
         getArticles();
-        console.log(articles);
+        //console.log(articles);
     }, [articles.length]);
 
 
     //Obtenemos los artículos
 
-    const getArticles = () => {
+    const getArticles = useCallback(() => {
         axios.get(url + "articles").then(res => {
             setArticles(res.data.articles);
         });
-    }
+    }, [url]);
 
     //Eliminamos un artículo por su id
 
