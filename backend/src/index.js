@@ -50,10 +50,8 @@ app.use((req, res, next) => {
 });
 
 //Cargamos los archivos de ruta
-app.use('/api', article_routes);
-app.use(cors({
-    origin: 'http://shoppr-web-alb-1534173248.us-east-1.elb.amazonaws.com'
-}));
+app.use('/api/', article_routes);
+
 /*app.listen(port, () => {
     console.log('listening on port ' + port);
 });*/
