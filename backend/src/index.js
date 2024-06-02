@@ -48,7 +48,9 @@ app.use((req, res, next) => {
     res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
     next();
 });
-
+app.use(cors({
+    origin: 'http://shoppr-web-alb-1534173248.us-east-1.elb.amazonaws.com'
+}));
 //Cargamos los archivos de ruta
 app.use('/api/', article_routes);
 
