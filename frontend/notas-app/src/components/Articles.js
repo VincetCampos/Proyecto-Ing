@@ -8,19 +8,15 @@ const Articles = () => {
     const [articles, setArticles] = useState([]);
     const url = Global.url;
 
-    useEffect(() => {
-        getArticles();
-        //console.log(articles);
-    }, [articles.length]);
-
-
-    //Obtenemos los artículos
-
     const getArticles = useCallback(() => {
         axios.get(url + "articles").then(res => {
             setArticles(res.data.articles);
         });
     }, [url]);
+
+    useEffect(() => {
+        getArticles();
+    }, [getArticles]);
 
     //Eliminamos un artículo por su id
 
