@@ -30,7 +30,7 @@ const Articles = () => {
     return (
 
         <div className="publicaciones">
-            <h1 className="mt-5">Artículos</h1>
+            <h1 className="mt-5">Libros</h1>
             <br /><br />
             <div className="container">
                 <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2">
