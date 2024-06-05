@@ -56,7 +56,7 @@ const New = () => {
 
             <div id="formulario" className="card mx-auto mb-3 mt-5" style={{ width: '30em' }}>
                 <div id="card-header" className="card-header text-dark">
-                    <h4>Publicar un nuevo artículo</h4>
+                    <h4>Publicar un nuevo Libro</h4>
                 </div>
 
                 <div className="card-body">
