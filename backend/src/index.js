@@ -1,6 +1,7 @@
 'use strict'
 
 const express = require('express');
+const cors = require('cors');
 require('dotenv').config();
 
 /*
@@ -49,6 +50,8 @@ app.use((req, res, next) => {
     next();
 });
 //Cargamos los archivos de ruta
+app.use(cors());
+
 app.use('/api', article_routes);
 
 /*app.listen(port, () => {
