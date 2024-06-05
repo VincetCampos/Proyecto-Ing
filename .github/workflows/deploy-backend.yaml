@@ -15,12 +15,16 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
+  
+      - name: Create .env
+        working-directory: backend
+        run: |
+          echo MONGO_URL="mongodb+srv://vincetalecampossam:gEDxFAVy2wLBbOTV@cluster0.cp3u7ds.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0" > .env
 
       - name: Install Dependencies
         working-directory: backend/src
         run: |
           npm install
-          echo MONGO_URL="mongodb+srv://vincetalecampossam:gEDxFAVy2wLBbOTV@cluster0.cp3u7ds.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0" > .env
 
       - name: Set up SSH key
         run: |
@@ -54,11 +58,15 @@ jobs:
         with:
           node-version: 20
 
+      - name: Create .env
+        working-directory: backend
+        run: |
+          echo MONGO_URL="mongodb+srv://vincetalecampossam:gEDxFAVy2wLBbOTV@cluster0.cp3u7ds.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0" > .env
+
       - name: Install Dependencies
         working-directory: backend/src
         run: |
           npm install
-          echo MONGO_URL="mongodb+srv://vincetalecampossam:gEDxFAVy2wLBbOTV@cluster0.cp3u7ds.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0" > .env
 
       - name: Set up SSH key
         run: |
