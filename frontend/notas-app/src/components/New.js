@@ -74,7 +74,7 @@ const New = () => {
                         </div>
 
                         <div className="mb-3">
-                            <label>Autor</label>
+                            <label>Nombre del Autor</label>
                             <input className="form-control" type="text" id="author" name="author" ref={authorRef} onChange={changeState} required />
                         </div>
 
