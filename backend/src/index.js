@@ -50,7 +50,9 @@ app.use((req, res, next) => {
     next();
 });
 //Cargamos los archivos de ruta
-app.use(cors());
+app.use(cors({
+    origin: process.env.FRONTEND_URL
+}));
 
 app.use('/api', article_routes);
 
